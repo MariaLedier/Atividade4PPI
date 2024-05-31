@@ -1,0 +1,28 @@
+{
+  "name": "atividade4ppi",
+  "version": "1.0.0",
+  "description": "Atividade 4 de PPI",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MariaLedier/Atividade4PPI.git"
+  },
+  "keywords": [
+    "NODE",
+    "PPI"
+  ],
+  "author": "Maria Ledier",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MariaLedier/Atividade4PPI/issues"
+  },
+  "homepage": "https://github.com/MariaLedier/Atividade4PPI#readme",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}

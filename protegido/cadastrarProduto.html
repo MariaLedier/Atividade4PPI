@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Página de Cadastro de Produtos</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <div class="container m-5">
+      <form
+        method="POST"
+        action="/cadastrarProduto"
+        class="border row g-3 needs-validation"
+        novalidate
+      >
+        <legend>Cadastro de Produtos</legend>
+
+        <div class="col-md-4">
+          <label for="codigoBarras" class="form-label">Código de barras:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="codigoBarras"
+            name="codigoBarras"
+            required
+          />
+        </div>
+
+        <div class="col-md-4">
+          <label for="descricaoProduto" class="form-label"
+            >Descrição do produto:</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="descricaoProduto"
+            name="descricaoProduto"
+            required
+          />
+        </div>
+
+        <div class="col-md-4">
+          <label for="precoCusto" class="form-label">Preço de custo:</label>
+          <div class="input-group has-validation">
+            <span class="input-group-text" id="inputGroupPrepend">R$</span>
+            <input
+              type="text"
+              class="form-control"
+              id="precoCusto"
+              name="precoCusto"
+              aria-describedby="inputGroupPrepend"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <label for="precoVenda" class="form-label">Preço de venda:</label>
+          <div class="input-group has-validation">
+            <span class="input-group-text" id="inputGroupPrepend">R$</span>
+            <input
+              type="text"
+              class="form-control"
+              id="precoVenda"
+              name="precoVenda"
+              aria-describedby="inputGroupPrepend"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <label for="dataValidade" class="form-label">Data de validade:</label>
+          <input
+            type="date"
+            class="form-control"
+            id="dataValidade"
+            name="dataValidade"
+            required
+          />
+        </div>
+
+        <div class="col-md-4">
+          <label for="qtdEstoque" class="form-label">Qtd em estoque:</label>
+          <input
+            type="number"
+            class="form-control"
+            id="qtdEstoque"
+            name="qtdEstoque"
+            required
+          />
+        </div>
+
+        <div class="col-md-4">
+          <label for="nomeFabricante" class="form-label"
+            >Nome do fabricante:</label
+          >
+          <input
+            list="fabricantes"
+            class="form-control"
+            id="nomeFabricante"
+            name="nomeFabricante"
+            required
+          />
+          <datalist id="fabricantes">
+            <option value="Fabricante A"></option>
+            <option value="Fabricante B"></option>
+            <option value="Fabricante C"></option>
+            <option value="Fabricante D"></option>
+            <option value="Fabricante E"></option>
+          </datalist>
+        </div>
+
+        <div class="col-12 mb-3">
+          <button class="btn btn-primary" type="submit">Cadastrar</button>
+          <a class="btn btn-secondary" href="/">Voltar</a>
+        </div>
+      </form>
+    </div>
+  </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"
+  ></script>
+</html>
