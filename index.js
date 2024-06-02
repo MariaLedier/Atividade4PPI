@@ -54,6 +54,10 @@ app.post("/login", (req, res) => {
 
   // Autenticação
   if (username === "usuario" && password === "senha") {
+    res.cookie("ultimoAcesso", new Date().toLocaleString(), {
+      maxAge: 900000,
+      httpOnly: true,
+    });
     req.session.username = username;
     res.redirect("/cadastrarProduto");
   } else {
@@ -135,6 +139,7 @@ app.get("/listarProdutos", (req, res) => {
     res.write("</head>");
     res.write("<body>");
     res.write("<h1>Lista de Produtos</h1>");
+    res.write(`<p>Último acesso: ${req.cookies.ultimoAcesso}</p>`);
     res.write('<table class="table table-striped">');
     res.write("<tr>");
     res.write("<th>Código de Barras</th>");
