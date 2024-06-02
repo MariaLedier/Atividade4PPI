@@ -23,6 +23,9 @@
   },
   "homepage": "https://github.com/MariaLedier/Atividade4PPI#readme",
   "dependencies": {
-    "express": "^4.19.2"
+    "cookie-parser": "^1.4.6",
+    "express": "^4.19.2",
+    "express-session": "^1.18.0",
+    "path": "^0.12.7"
   }
 }

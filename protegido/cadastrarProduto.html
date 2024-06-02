@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Página de Cadastro de Produtos</title>
+    <title>Cadastro de Produto</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -11,19 +11,13 @@
       crossorigin="anonymous"
     />
   </head>
-
   <body>
-    <div class="container m-5">
-      <form
-        method="POST"
-        action="/cadastrarProduto"
-        class="border row g-3 needs-validation"
-        novalidate
-      >
-        <legend>Cadastro de Produtos</legend>
-
-        <div class="col-md-4">
-          <label for="codigoBarras" class="form-label">Código de barras:</label>
+    <div class="container mt-5">
+      <h2>Cadastro de Produto</h2>
+      <p><a href="/listarProdutos">Listagem de produtos</a></p>
+      <form method="POST" action="/cadastrarProduto">
+        <div class="mb-3">
+          <label for="codigoBarras" class="form-label">Código de Barras</label>
           <input
             type="text"
             class="form-control"
@@ -32,10 +26,9 @@
             required
           />
         </div>
-
-        <div class="col-md-4">
+        <div class="mb-3">
           <label for="descricaoProduto" class="form-label"
-            >Descrição do produto:</label
+            >Descrição do Produto</label
           >
           <input
             type="text"
@@ -45,39 +38,30 @@
             required
           />
         </div>
-
-        <div class="col-md-4">
-          <label for="precoCusto" class="form-label">Preço de custo:</label>
-          <div class="input-group has-validation">
-            <span class="input-group-text" id="inputGroupPrepend">R$</span>
-            <input
-              type="text"
-              class="form-control"
-              id="precoCusto"
-              name="precoCusto"
-              aria-describedby="inputGroupPrepend"
-              required
-            />
-          </div>
+        <div class="mb-3">
+          <label for="precoCusto" class="form-label">Preço de Custo</label>
+          <input
+            type="number"
+            class="form-control"
+            id="precoCusto"
+            name="precoCusto"
+            step="0.01"
+            required
+          />
         </div>
-
-        <div class="col-md-4">
-          <label for="precoVenda" class="form-label">Preço de venda:</label>
-          <div class="input-group has-validation">
-            <span class="input-group-text" id="inputGroupPrepend">R$</span>
-            <input
-              type="text"
-              class="form-control"
-              id="precoVenda"
-              name="precoVenda"
-              aria-describedby="inputGroupPrepend"
-              required
-            />
-          </div>
+        <div class="mb-3">
+          <label for="precoVenda" class="form-label">Preço de Venda</label>
+          <input
+            type="number"
+            class="form-control"
+            id="precoVenda"
+            name="precoVenda"
+            step="0.01"
+            required
+          />
         </div>
-
-        <div class="col-md-4">
-          <label for="dataValidade" class="form-label">Data de validade:</label>
+        <div class="mb-3">
+          <label for="dataValidade" class="form-label">Data de Validade</label>
           <input
             type="date"
             class="form-control"
@@ -86,9 +70,10 @@
             required
           />
         </div>
-
-        <div class="col-md-4">
-          <label for="qtdEstoque" class="form-label">Qtd em estoque:</label>
+        <div class="mb-3">
+          <label for="qtdEstoque" class="form-label"
+            >Quantidade em Estoque</label
+          >
           <input
             type="number"
             class="form-control"
@@ -97,37 +82,25 @@
             required
           />
         </div>
-
-        <div class="col-md-4">
+        <div class="mb-3">
           <label for="nomeFabricante" class="form-label"
-            >Nome do fabricante:</label
+            >Nome do Fabricante</label
           >
           <input
-            list="fabricantes"
+            type="text"
             class="form-control"
             id="nomeFabricante"
             name="nomeFabricante"
             required
           />
-          <datalist id="fabricantes">
-            <option value="Fabricante A"></option>
-            <option value="Fabricante B"></option>
-            <option value="Fabricante C"></option>
-            <option value="Fabricante D"></option>
-            <option value="Fabricante E"></option>
-          </datalist>
         </div>
-
-        <div class="col-12 mb-3">
-          <button class="btn btn-primary" type="submit">Cadastrar</button>
-          <a class="btn btn-secondary" href="/">Voltar</a>
-        </div>
+        <button type="submit" class="btn btn-primary">Cadastrar</button>
       </form>
     </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
   </body>
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"
-  ></script>
 </html>
